@@ -1,0 +1,204 @@
+html {
+  background-color: #0A233A;
+  color: #fff;
+  margin: auto;
+  font-family: 'Alef', sans-serif;
+}
+
+header {
+
+}
+p {
+  line-height: 2rem;
+}
+.parallax-container {
+  min-height: 45vh;
+  line-height: 0;
+  height: auto;
+  font-color: white;
+  background-color: black;
+}
+.parallax-container .section {
+  width: 100%;
+
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 5%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+  background-color: black;
+  font-color: white;
+}
+
+
+/* MAP STYLING */
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+#target {
+  width: 345px;
+}
+
+
+/* Filters */
+
+
+.infoBox h3 {
+  margin-top: 0 !important;
+}
+
+.filter-container {
+  position: relative;
+}
+.filters {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 99;
+  float: right;
+}
+
+.browser-default {
+  color: #000000;
+}
+
+.list-heading {
+  color: #51c9e1;
+  font-size: 15px;
+  background-color: #000;
+  opacity: .8;
+}
+
+.infoBox {
+  background: #grey !important;
+  font-size: 16px !important;
+  padding: 10px !important;
+
+  color: #000000 !important;
+  width: 200px !important;
+}
+
+.infoBox h4 {
+  margin-top: 0 !important;
+  background-color: #51c9e1 !important;
+  display: block;
+}
+
+.gm-style-iw {
+   width: 250px !important;
+   height:30vh;
+   top: 0 !important;
+   left: 0 !important;
+   background-color: #51c9e1;
+   box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+   border: 1px solid rgba(72, 181, 233, 0.6);
+   border-radius: 2px 2px 0 0;
+}
+
+.modal-content {
+  color: black;
+  font-size: 18px;
+}
+
+#modalp {
+  color: rgba(0,0,0,0.71);
+}

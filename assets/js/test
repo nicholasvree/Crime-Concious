@@ -1,0 +1,45 @@
+// global variables
+var selectedYear = 'all'
+var selectedCrime = 'all'
+//listeners - when change, set the corresponding select variable and run the changesMade function
+$("#year-dropdown").on("change", function(){
+    selectedYear = $("#year-dropdown :selected").attr("value");
+    changesMade()
+})
+$("#crime-type-dropdown").on("change", function(){
+    selectedCrime = $("#crime-type-dropdown :selected").attr("value");
+    console.log(selectedCrime)
+    changesMade()
+})
+$("#radius-dropdown").on("change", function(){
+    radius = $("#radius-dropdown :selected").attr("value");
+    console.log(radius)
+    changesMade()
+})
+//when changes are made to the drop downs or search, change the query URL accordingly and then run AJAX
+function changesMade(){
+    if(selectedYear === 'all' & selectedCrime === 'all'){
+        console.log("both Null")
+        queryURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?$where=within_circle(location,%20" + latitude + ",%20" + longitude + ",%20" + radius + ")"
+        locationajax()
+    }
+    else if(selectedYear!= 'all' & selectedCrime === 'all'){
+                console.log("year not Null")
+        queryURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?$where=within_circle(location,%20" + latitude + ",%20" + longitude + ",%20" + radius + ")&year=" + selectedYear; 
+        locationajax()
+    }
+    else if (selectedYear ==='all' & selectedCrime != 'all'){
+                console.log("crime not Null")
+        queryURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?$where=within_circle(location,%20" + latitude + ",%20" + longitude + ",%20" + radius + ")&primary_type="+selectedCrime
+        locationajax()
+    }
+    else if (selectedYear !='all' & selectedCrime != 'all'){
+                console.log("niether are null")
+        queryURL = "https://data.cityofchicago.org/resource/6zsd-86xi.json?$where=within_circle(location,%20" + latitude + ",%20" + longitude + ",%20" + radius + ")&year=" + selectedYear + "&primary_type="+ selectedCrime
+        locationajax()
+    }
+    else{
+        console.log('errors')
+        
+    }
+}

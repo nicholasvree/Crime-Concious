@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyAeLu14HV0oKo1YYiceQ30EIFOGuBJtvXk" type="text/javascript"></script>
+
+  <link rel="icon" type="image/png" href="assets/images/search.png">
+
+  <title>Crime Conscious</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/css?family=Alef|Anton|Bevan|Bowlby+One+SC|Coda:800|Kanit:800|Passion+One:900|Rubik+Mono+One|Teko" rel="stylesheet">
+
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div id="index-banner" class="parallax-container transparent">
+      <div class="parallax">
+       <img src="assets/images/crimescene.png" alt="crime scene banner">
+     </div>
+     <h1 class="header center white-text text-lighten-2">CRIME CONSCIOUS
+      <div class="row center"><br>
+        <h5 class="header col s12 light"></h5>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br><br><br>
+</div>
+</div>
+</div>
+
+  <!-- Error 1: Map didn't find anything modal: -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Oops!</h4>
+      <p id="modalp">It looks like your search returned no results, please try searching for something else.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+    </div>
+  </div>  
+
+  <!-- Error 2: Location not in chicago modal: -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Oops!</h4>
+      <p id="modalp">It looks like you searched for something outside of Chicago. </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+    </div>
+  </div>
+
+  <!-- Error 3: No crimes of this type or year modal: -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h4>Phew</h4>
+      <p id="modal3p">There we no crimes of this type during this year.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+    </div>
+  </div>
+
+<div class="row center-align">
+  <h5>Crime Conscious is a map that displays crimes within a given area.</h5>
+  <div class="input-field offset-s1 col s6">
+    <input placeholder="e.g. Logan Theater" id="user-locate" type="text" class="validate">
+    <div class="input-field "></div>
+    <label for="user-locate">Enter a location to find nearby crimes</label>
+  </div>
+  <div class="input-field col s3">
+    <a class="btn-floating btn-large waves-effect waves-light cyan accent-4" id="submit"><i class="material-icons">search</i></a>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!--   Map   -->
+<div class="filter-container">
+  <div id="map" class="valign-wrapper" style="width: 100%; height: 600px;"></div>
+  <div class="filters">
+    <ul>
+      <li>
+        <label class="list-heading">Type of Crime</label>
+        <select id ="type-dropdown" class="browser-default">
+          <option value="Any" selected>Any Crime</option>
+        </select>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <label class="list-heading">Year</label>
+        <select id ="year-dropdown" class="browser-default">
+          <option value="Any" selected>Any Year</option>
+        </select>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <label class="list-heading">Radius</label>
+        <select id ="radius-dropdown" class="browser-default">
+          <option value="804" selected>0.5 miles</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="clear"></div>
+
+<!-- Footer -->
+<footer class="page-footer black">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Meet the Team</h5>
+        <p class="white-text">We are a team of coding bootcampers at Northwestern who had a blast making this site.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    Copyright &copy Julia, JC, Edge, and Nick</a>
+  </div>
+</div>
+</footer>
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script src="assets/js/init.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="assets/js/logic.js"></script>
+
+</body>
+</html>
